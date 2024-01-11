@@ -1,9 +1,44 @@
 import analyzer from './analyzer.js';
-const topicosDaLista = (Text) => {
-    const wordcount = analyzer.getWordCount(document.querySelector('[name="user-input"]').value)
+const texterea = document.querySelector('[name="user-input"]');
+
+const WordCount = document.querySelector('[data-testid = "word-count"]');
+    
+const characterCount = document.querySelector('[data-testid = "character-count"]');
+    
+const characterNoSpacesCount = document.querySelector('[data-testid = "character-no-spaces-count"]');
+    
+const wordLengthAverage = document.querySelector('[data-testid = "word-length-average"]');
+
+const numberCount = document.querySelector('[data-testid = "number-count"]');
+    
+const numberSum = document.querySelector('[data-testid = "number-sum"]');
+
+const button = document.getElementById ('reset-button');
+
+
+texterea.addEventListener ('input', () => {
+  const palavras = analyzer.getWordCount (texterea.value)
+  WordCount.textContent = "contagem de palavras: " + palavras
+
+  const caracteres = analyzer.getCharacterCount (texterea.value)
+  characterCount.textContent = "contagem de caracteres: " + caracteres
+
+  const espacos = analyzer.getCharacterCountExcludingSpaces (texterea.value)
+  characterNoSpacesCount.textContent = "contagem de espaços: " + espacos
+
+  const comprimento = analyzer.getAverageWordLength (texterea.value)
+  wordLengthAverage.textContent = "Comrprimento das palavras: " + comprimento
+
+  const numeros = analyzer.getNumberCount (texterea.value)
+  numberCount.textContent = "contagem de números: " + numeros 
   
-    document.querySelector('[data-testid = "word-count"]').textContent = `Contagem de palavras: ${wordcount}`;
+  const somar = analyzer.getNumberSum (texterea.value)
+  numberSum.textContent = "soma de números: " + somar
   
-  }
-  document.querySelector('[name="user-input"]').addEventListener("input",topicosDaLista)
+});
+
+button.addEventListener ('click', () => {
+  texterea.value = ""
+});
+
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`

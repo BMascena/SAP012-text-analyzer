@@ -15,7 +15,7 @@
   header {
     padding: 10px;
     border-bottom: 1px solid #f0eaef;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 20px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -30,7 +30,7 @@
     padding: 7px 20px;
     border-radius: 10px;
     list-style: none;
-    margin: 20px 10px;
+    margin: 10px 10px;
     width: 250px;
     height: 40px;
     display: flex;
@@ -39,7 +39,7 @@
   
   textarea[name="user-input"] {
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
   }
   
   #reset-button {
@@ -58,5 +58,5 @@
     text-align: right;
     color: #f5cfd2;
     margin: 20px;
-    width: 100vw;
+    width: 100%;
   }
