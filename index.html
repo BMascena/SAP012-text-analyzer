@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head> <!--AQUI FICA OS METADADOS, OU SEJA AS TEGS QUE NAO PARARECEM PARA O USUÁRIO-->
+  <meta charset="utf-8">
+  <title>Analizador de texto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body> <!-- TODAS AS INFORMAÇÕES DA PÁGINA-->
+  <header>
+    <h1>Analizador de texto</h1>
+  </header> <!-- CABEÇALHO DA PÁGINA--> 
+  <textarea name="user-input" cols="75" rows="15"></textarea> <!-- CAMPO PARA O USUÁRIO ESCREVER (A CLASS sobrepoe a TAG)-->
+  <script src="index.js" type="module" defer></script>
+  <main>
+    <ul> <!-- TODAS AS INFORMAÇÕES DA LISTA-->
+      <li class = "topicos-da-lista" data-testid = "word-count">Contagem de palavras:</li> <!--ÍCONES DA LISTA-->
+      <li class = "topicos-da-lista" data-testid = "character-count">Contagem de caracteres:</li>
+      <li class = "topicos-da-lista" data-testid = "character-no-spaces-count">Contagem de espaços:</li>
+      <li class = "topicos-da-lista" data-testid = "word-length-average">Comprimento das palavras:</li>
+      <li class = "topicos-da-lista" data-testid = "number-count">Contagem de números:</li>
+      <li class = "topicos-da-lista" data-testid = "number-sum">Soma de números:</li>
+    </ul>
+    <button id="reset-button">Limpar</button> <!-- BOTÃO (O ID sobrepoe a CLASS e a TAG)-->
+  </main>
+  <footer>
+    <p>Desenvolvido por: Bárbara Mascena</p>
+  </footer> <!-- ASSINATURA DA PÁGINA-->
+</body>
+</html>
