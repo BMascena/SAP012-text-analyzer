@@ -1,43 +1,42 @@
 const analyzer = {
     getWordCount: (text) => {
-        const palavras = text.trim().split(/[0-9]\s+/g)
+        const palavras = text.split(" ")
         return palavras.length;
     },
-// TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
 
-    getCharacterCount: (text) => { //text um valor que foi atribuido no index, nesse caso texterea.value, ex que palomita usou da equação de 1º
-        const caracteres = text.replace(/\s/g, ''); // metodo replace, pega o regex e transforma em outra coisa /\s/g é usado para achar espaços em branco
-        return caracteres.length;
-
-// TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
+    getCharacterCount: (text) => {
+        return text.length;
     },
+
     getCharacterCountExcludingSpaces: (text) => {
-        const espacos = text.match(/\s/g) || [];
+        const espacos = text.replace(/[\s.,]/gm,"");
         return espacos.length
-
-// TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
     },
+
     getAverageWordLength: (text) => {
-// TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+        const palavras = text.split(" ");
+        let totalpalavras = 0
+        for ( let i = 0; i < palavras.length; i++)
+            totalpalavras += palavras[i].length
+        return parseFloat((totalpalavras / palavras.length).toFixed(2));
     },
+
     getNumberCount: (text) => {
-        const numeros = text.match(/\d+/g);
+        const numeros = text.match(/\b\d+(\.\d+)?\b/g);
         if (numeros) {
-            let totalLength = 0;
-            for (const numero of numeros) {
-                totalLength += numero.length;
-            }
-
-            return totalLength;
+           return numeros.length
         } else {
-            return 0; // ou qualquer outro valor ou ação apropriados
+            return 0;
         }
-
-// TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     },
     getNumberSum: (text) => {
-
-// TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+        const snumeros = text.match(/\b\d+(\.\d+)?\b/g);
+        if (snumeros) {
+            const soma = snumeros.reduce((acc, num) => acc + parseFloat(num), 0);
+            return soma
+        } else {
+            return 0;
+        }
     },
 }
 

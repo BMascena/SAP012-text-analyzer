@@ -18,22 +18,22 @@ const button = document.getElementById ('reset-button');
 
 texterea.addEventListener ('input', () => {
   const palavras = analyzer.getWordCount (texterea.value)
-  WordCount.textContent = "contagem de palavras: " + palavras
+  WordCount.textContent = "Contagem de palavras: " + palavras
 
   const caracteres = analyzer.getCharacterCount (texterea.value)
-  characterCount.textContent = "contagem de caracteres: " + caracteres
+  characterCount.textContent = "Contagem de caracteres: " + caracteres
 
   const espacos = analyzer.getCharacterCountExcludingSpaces (texterea.value)
-  characterNoSpacesCount.textContent = "contagem de espaços: " + espacos
+  characterNoSpacesCount.textContent = "Contagem de espaços: " + espacos
 
   const comprimento = analyzer.getAverageWordLength (texterea.value)
   wordLengthAverage.textContent = "Comrprimento das palavras: " + comprimento
 
   const numeros = analyzer.getNumberCount (texterea.value)
-  numberCount.textContent = "contagem de números: " + numeros 
+  numberCount.textContent = "Contagem de números: " + numeros 
   
-  const somar = analyzer.getNumberSum (texterea.value)
-  numberSum.textContent = "soma de números: " + somar
+  const snumeros = analyzer.getNumberSum (texterea.value)
+  numberSum.textContent = "Soma de números: " + snumeros
   
 });
 
