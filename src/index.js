@@ -38,7 +38,13 @@ texterea.addEventListener ('input', () => {
 });
 
 button.addEventListener ('click', () => {
-  texterea.value = ""
+  texterea.value = "";
+  WordCount.textContent = 'Contagem de Caracteres: 0';
+  characterCount.textContent = 'Contagem de caracteres: 0';
+  characterNoSpacesCount.textContent = 'Contagem de espaços: 0';
+  wordLengthAverage.textContent = 'Comrprimento das palavras: 0';
+  numberCount.textContent = 'Contagem de números: 0';
+  numberSum.textContent = 'Soma de números: 0';
 });
 
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`

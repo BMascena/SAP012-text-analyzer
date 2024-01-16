@@ -9,7 +9,7 @@ const analyzer = {
     },
 
     getCharacterCountExcludingSpaces: (text) => {
-        const espacos = text.replace(/[\s.,]/gm,"");
+        const espacos = text.replace(/[\s.,]/gm,""); //perguntar na OH se é necessário add todos os tipos de caracteres no regex!
         return espacos.length
     },
 
@@ -22,7 +22,7 @@ const analyzer = {
     },
 
     getNumberCount: (text) => {
-        const numeros = text.match(/\b\d+(\.\d+)?\b/g);
+        const numeros = text.match(/\b\d+(\.\d+)?\b/g); 
         if (numeros) {
            return numeros.length
         } else {

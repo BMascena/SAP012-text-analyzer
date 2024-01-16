@@ -5,7 +5,6 @@
   }
   
   body {
-    margin-top: 10px;
     background: linear-gradient(68.15deg, #f86fe1 16.62%, #7c0665 85.61%);
     display: flex;
     flex-direction: column;
@@ -16,6 +15,7 @@
     padding: 10px;
     border-bottom: 1px solid #f0eaef;
     width: 100%;
+    height: 100%;
     margin-bottom: 20px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -51,12 +51,13 @@
     cursor: pointer;
     width: 100px;
     height: 40px;
-    box-shadow: 7px 9px 7px;
+    box-shadow: 0 0 10px #ffe0ff;
+    margin: 10px;
   }
-  
+
   footer {
     text-align: right;
     color: #f5cfd2;
     margin: 20px;
-    width: 100%;
+    width: 90%;
   }
