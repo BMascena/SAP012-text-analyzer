@@ -23,7 +23,7 @@ texterea.addEventListener ('input', () => {
   const caracteres = analyzer.getCharacterCount (texterea.value)
   characterCount.textContent = "Contagem de caracteres: " + caracteres
 
-  const espacos = analyzer.getCharacterCountExcludingSpaces (texterea.value)
+  const espacos = analyzer.getCharacterCountExcludingSpaces (texterea.value) //corrigir o readme
   characterNoSpacesCount.textContent = "Contagem de espaços: " + espacos
 
   const comprimento = analyzer.getAverageWordLength (texterea.value)

@@ -1,7 +1,7 @@
 const analyzer = {
     getWordCount: (text) => {
         const palavras = text.split(" ")
-        return palavras.length;
+        return palavras.length; 
     },
 
     getCharacterCount: (text) => {
@@ -9,12 +9,12 @@ const analyzer = {
     },
 
     getCharacterCountExcludingSpaces: (text) => {
-        const espacos = text.replace(/[\s.,]/gm,""); //perguntar na OH se é necessário add todos os tipos de caracteres no regex!
+        const espacos = text.replace(/[\s.,]/gm,""); 
         return espacos.length
     },
 
     getAverageWordLength: (text) => {
-        const palavras = text.split(" ");
+        const palavras = text.split(" "); 
         let totalpalavras = 0
         for ( let i = 0; i < palavras.length; i++)
             totalpalavras += palavras[i].length
