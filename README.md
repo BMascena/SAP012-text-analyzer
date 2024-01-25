@@ -35,7 +35,7 @@ A lista de recursos inclui:
 7. **Comprimento Médio das Palavras:** Calcula e mostra o comprimento médio das palavras no texto inserido.
 8. **Limpeza de Conteúdo:** Oferece a opção de limpar o conteúdo da caixa de texto por meio de um botão.
 
-![Demonstração do analisador de texto](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650556-988dcd6f-bc46-473b-894c-888a66c9fe2d.gif "Demonstração do analisador de texto")
+![Demonstração do analisador de texto](Animação.gif "Demonstração do analisador de texto")
 
 ## 5. Boilerplate
 
